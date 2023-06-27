@@ -9,7 +9,7 @@ assertString(sid);
 console.log(`Exporting a json file from "/${exportingProjectName}"...`);
 const result = await exportPages(exportingProjectName, {
   sid,
-  metadata: true,
+  metadata: false,
 });
 if (!result.ok) {
   const error = new Error();
@@ -18,4 +18,4 @@ if (!result.ok) {
   throw error;
 }
 
-Deno.writeTextFile("data.json", JSON.stringify(result.value, null, 2));
+Deno.writeTextFile("omoikane.json", JSON.stringify(result.value, null, 2));
