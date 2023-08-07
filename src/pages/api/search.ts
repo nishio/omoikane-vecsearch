@@ -7,10 +7,10 @@ const handle = async (req: NextApiRequest, res: NextApiResponse) => {
   const uid = req.body.uid;
   const openAIEmbedding = await embed(textToEmbed);
 
-  const COLLECTION_NAME = process.env.QDRANT_COLLECTION_NAME!;
+  const COLLECTION_NAME = process.env.COLLECTION_NAME!;
 
   const client = new QdrantClient({
-    url: process.env.QDRANT_ENDPOINT,
+    url: process.env.QDRANT_URL,
     apiKey: process.env.QDRANT_API_KEY,
   });
 
