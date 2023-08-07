@@ -1,3 +1,5 @@
+const PROJECT_NAME = process.env.PROJECT_NAME!;
+
 export function Header() {
   return (
     <header className="py-2 px-4 bg-blue-700 text-white shadow-lg">
@@ -8,7 +10,7 @@ export function Header() {
           href="https://scrapbox.io/omoikane/"
           target="_blank"
         >
-          [/omoikane]
+          [/{PROJECT_NAME}]
         </a>
       </p>
     </header>

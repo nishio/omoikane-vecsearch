@@ -4,10 +4,11 @@ import { Inter } from "next/font/google";
 import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
+const PROJECT_NAME = process.env.PROJECT_NAME!;
 
 export const metadata = {
   title: "omoikane-vecsearch",
-  description: "Vector search on Omoikane Project[/omoikane]",
+  description: `Vector search on [/${PROJECT_NAME}]`,
 };
 
 export default function RootLayout({
